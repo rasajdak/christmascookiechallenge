@@ -201,12 +201,14 @@ function restartGame(event) {
         if (timer) {
             clearInterval(timer);
             timer = null; // Reset timer
+            console.log("Timer Reset to null"); // Debugging log
         }
 
         // Reset game variables
         gameStarted = false; // This will be toggled to true later
         score = 0;
         timeRemaining = 60; // Reset the timer
+        console.log("Timer Reset to 60"); // Debugging log
 
         // Restart background music
         backgroundMusic.currentTime = 0;
