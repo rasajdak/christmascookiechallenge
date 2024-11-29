@@ -20,4 +20,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}  # Your Bluehost FTP username
         password: ${{ secrets.FTP_PASSWORD }}  # Your Bluehost FTP password
         local-dir: ./  # Directory to deploy from, adjust if necessary
-        server-dir: /public_html/ryansajdak/game/christmascookiechallenge  # Target directory on Bluehost
+        server-dir: /public_html/ryansajdak/game/christmascookiechallenge/  # Target directory on Bluehost
