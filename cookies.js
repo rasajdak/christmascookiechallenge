@@ -71,7 +71,7 @@ const profile = {
     y: canvas.height / 2 - 64, // Center the original size
     width: 128, // Original size restored
     height: 128, // Original size restored
-    speed: 300, // Increased speed
+    speed: 30, // Increased speed
     direction: 'right', // Initial direction
     draw: function () {
         ctx.save();
