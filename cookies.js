@@ -174,7 +174,7 @@ function endGame() {
 
     // Display final score
     ctx.fillStyle = 'black';
-    ctx.font = '48px Arial';
+    ctx.font = '48px Courier New';
     ctx.textAlign = 'center';
     ctx.fillText('Game Over!', canvas.width / 2, canvas.height / 2 - 50);
     ctx.fillText('Your Score: ' + score, canvas.width / 2, canvas.height / 2);
