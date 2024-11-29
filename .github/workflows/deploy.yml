@@ -1,0 +1,23 @@
+name: Deploy to Bluehost
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when changes are pushed to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Deploy via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}  # Your Bluehost FTP server
+        username: ${{ secrets.FTP_USERNAME }}  # Your Bluehost FTP username
+        password: ${{ secrets.FTP_PASSWORD }}  # Your Bluehost FTP password
+        local-dir: ./  # Directory to deploy from, adjust if necessary
+        server-dir: /public_html/ryansajdak/game/christmascookiechallenge  # Target directory on Bluehost
