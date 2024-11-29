@@ -32,7 +32,7 @@ cookieImages[2].src = '6.png';
 const nomSound = new Audio('nom.mp3');
 const backgroundMusic = new Audio('music.mp3');
 backgroundMusic.loop = true; // Loop the music
-backgroundMusic.volume = 0.5; // Set background music volume to 30%
+backgroundMusic.volume = 0.5; // Set background music volume to 50%
 
 // Track the current image index
 let currentImageIndex = 0;
