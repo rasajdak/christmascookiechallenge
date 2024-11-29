@@ -6,7 +6,6 @@ const ctx = canvas.getContext('2d');
 let gameStarted = false; // Track if the game has started
 let timer = null; // Tracks the game timer interval
 
-
 // Set canvas dimensions
 canvas.width = 800;
 canvas.height = 600;
@@ -28,8 +27,6 @@ const cookieImages = [new Image(), new Image(), new Image()];
 cookieImages[0].src = '4.png';
 cookieImages[1].src = '5.png';
 cookieImages[2].src = '6.png';
-
-
 
 // Load audio
 const nomSound = new Audio('nom.mp3');
@@ -67,8 +64,6 @@ function showInstructions() {
     ctx.fillText("to eat as many cookies as you can in 60 seconds!", canvas.width / 2, canvas.height / 2);
     ctx.fillText("Press Spacebar to Start", canvas.width / 2, canvas.height / 2 + 40);
 }
-
-
 
 // Profile object
 const profile = {
@@ -198,10 +193,6 @@ function endGame() {
     requestAnimationFrame(() => {});
 }
 
-
-
-
-
 function restartGame(event) {
     if (event.code === 'Space') {
         console.log("Restarting the game..."); // Debugging log
@@ -230,10 +221,6 @@ function restartGame(event) {
         gameLoop();
     }
 }
-
-
-
-
 
 function gameLoop() {
     if (!gameStarted) return; // Stop the loop if the game has ended
@@ -270,9 +257,6 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
-
-
-
 function startTimer() {
     console.log("Starting the timer..."); // Debugging log
 
@@ -295,8 +279,6 @@ function startTimer() {
         }
     }, 1000);
 }
-
-
 
 // Start the game loop and timer once all images are loaded
 let imagesLoaded = 0;
